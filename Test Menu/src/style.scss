@@ -1,0 +1,120 @@
+@import '_normalize';
+@import '_nullstyle';
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	line-height: 1;
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	background-color: gray;
+	position: relative;
+}
+
+//---------------header----------------------
+
+.header {
+	width: fit-content;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+		&__container {
+			width: 345px;
+			height: 500px;
+			position: fixed;
+			top: 50%;
+			left: -300px;
+			margin-top: -250px;
+			transition: all 0.3s ease;
+		}
+
+		&__buttons {
+			width:fit-content;
+			height:fit-content;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -68px;
+		}
+
+		&__search{
+
+		}
+
+		&__body {
+			width: 300px;
+			height: 500px;
+			position: relative;
+			background-color: bisque;
+		}
+
+		&__container.active{
+			left: 0;
+		}
+
+		&__btn{
+			display: block;
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			row-gap: 40px;
+			width: 100%;
+			height: 100%;
+		}
+
+		&__link {
+			color: inherit;
+			font-family: inherit;
+			text-transform: uppercase;
+			font-size: 20px;
+			font-weight: 500;
+		}
+
+		&__link:hover{
+			color: red;
+		}
+}
+
+.fa-solid {
+	color: black;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	cursor: pointer;
+	background-color: bisque;
+	font-size: 30px;
+}
+
+.fa-solid:hover{
+	background-color: darken($color: bisque, $amount: 10%);
+}
+
+//------------------------main--------------------------------
+
+.main {
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 100%;
+}
+.title {
+	padding-top: 100px;
+	font-size: 60px;
+	font-weight: 700;
+	text-align: center;
+}
+.text {
+	text-align: justify;
+	padding-top: 50px;
+	text-indent: 20px;
+	line-height: 1.5;
+}
