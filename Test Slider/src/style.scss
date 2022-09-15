@@ -1,0 +1,93 @@
+@import "_normalize";
+@import "_nullstyle";
+
+html {
+	overflow: hidden;
+}
+
+body {
+	font-size: 20px;
+	max-width: 100%;
+	min-height: 100%;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1200px;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
+.title {
+	text-align: center;
+	font-size: 40px;
+	padding-top: 80px;
+}
+
+// ----------------Slider--------------------
+
+.slider {
+	padding-top: 100px;
+	position: relative;
+
+	& .slick-list {
+		overflow: hidden;
+		margin: 0 auto;
+		width: 100%;
+		display: flex;
+	}
+
+	& .slick-track {
+		display: flex;
+		column-gap: 20px;
+	}
+
+	& .slick-slide {
+		width: 200px;
+		height: 300px;
+		background-color: gray;
+	}
+
+	& .slick-arrow {
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		font-size: 0;
+	}
+
+	& .slick-arrow.slick-prev {
+		left: -50px;
+		background: url(../../img/chevron-left-solid.svg) 0 0 / 100% no-repeat;
+		width: 50px;
+		height: 100px;
+		background-position: center;
+	}
+
+	& .slick-arrow.slick-next {
+		right: -50px;
+		background: url(../../img/chevron-right-solid.svg) 0 0 / 100% no-repeat;
+		width: 50px;
+		height: 100px;
+		background-position: center;
+	}
+
+	& .slick-dots {
+		font-size: 0;
+		display: flex;
+		column-gap: 15px;
+		justify-content: center;
+		margin-top: 30px;
+	}
+	& .slick-dots li {
+		width: 10px;
+		height: 10px;
+		border: 1px solid black;
+		background-color: transparent;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+	& .slick-dots li.slick-active {
+		background-color: red;
+	}
+}
